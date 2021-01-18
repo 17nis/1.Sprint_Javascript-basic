@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nivell 2</title>
+</head>
+<body>
+    <script>
+        // Exercici 1 
+        console.log("Hello world");
+
+        // Exercici 2
+        alert("Genís Frigola Camps");
+
+        // Exercici 3
+        let nom = "Genís";
+        let cognom = "Frigola";
+        console.log("El meu nom és " + nom + cognom);
+
+        // Exercici 4 
+        let num1 = 14;
+        let num2 = 7;
+        console.log(`la suma de ${num1} + ${num2} és ${num1 + num2}`);
+
+        // Exercici 5 -- M'estava encallant amb comprovar si isNaN, i com que les instruccions no deia que s'havia de fer, ho he deixat :D
+        let nota_examen = parseFloat(prompt("Nota examen:"));
+        while(nota_examen<0 || nota_examen>10){
+            alert("Introdueix una nota entre 0 i 10")
+            nota_examen = parseFloat(prompt("Nota examen:"));
+        }
+        let suspes;
+        nota_examen<5? suspes= true: suspes= false;
+        if(suspes == true){console.log("Has suspès amb una nota de " + nota_examen)}
+        else{console.log("Has aprovat amb una nota de " + nota_examen)}
+
+        // Exercici 6
+        let text = "Tinc un cotxe de color verd";
+        console.log(text);
+        text2 = text.replace("verd", "blau");
+        console.log(text2);
+        text3 = text2.replace(/o/g, "u");
+        console.log(text3);
+
+        // Exercici 7
+        let arrObjectes = ["taula", "cadira", "ordinador", "llibreta"];
+        for (let i = 0; i<arrObjectes.length; i++){
+            console.log(`L'objecte ${arrObjectes[i]} està a la posició ${i}`);
+        }
+
+        // Exercici 8
+        let valor1 = parseFloat(prompt("Primer valor (número) de la calculadora:"));
+        let operador= prompt("Introdueix un operador: (suma / resta / mult)");
+        let valor2 = parseFloat(prompt("Segon valor (número) de la calculadora:"));
+        calculadora(operador, valor1, valor2);
+
+        function calculadora(operador, valor1, valor2){
+            switch (operador){
+                case "suma":
+                    console.log(`La suma de ${valor1} i ${valor2} és de ${valor1 + valor2}`);
+                    break;
+                case "resta":
+                    console.log(`La resta de ${valor1} i ${valor2} és de ${valor1 - valor2}`);
+                    break;
+                case "mult":
+                    console.log(`La multiplicació de ${valor1} i ${valor2} és de ${valor1 * valor2}`);
+                    break;
+                default: 
+                    console.log("%cERROR. Introdueix un operador vàlid (suma / resta / mult)");
+            }
+        }
+
+    // Nivell 2 
+     
+        valor1 = parseFloat(prompt("Primer valor (número) de la calculadora:"));
+        operador= prompt("Introdueix un operador: (suma / resta / mult / divi)");
+        valor2 = parseFloat(prompt("Segon valor (número) de la calculadora:"));
+        calculadora2(operador, valor1, valor2);
+
+        function calculadora2(operador, valor1, valor2){
+            switch (operador){
+                case "suma":
+                    console.log(`La suma de ${valor1} i ${valor2} és de ${valor1 + valor2}`);
+                    break;
+                case "resta":
+                    console.log(`La resta de ${valor1} i ${valor2} és de ${valor1 - valor2}`);
+                    break;
+                case "mult":
+                    console.log(`La multiplicació de ${valor1} i ${valor2} és de ${valor1 * valor2}`);
+                    break;
+                case "divi":
+                    if(valor2 == 0){console.log("No hauries de dividir per 0!")}
+                    else{console.log(`La divisió de ${valor1} i ${valor2} és de ${valor1 / valor2}`)}
+                    break;
+                default: 
+                    console.log("%cERROR. Introdueix un operador vàlid (suma / resta / mult / divi)");
+            }
+        }
+
+    </script>
+</body>
+</html>
