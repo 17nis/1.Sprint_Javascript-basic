@@ -48,7 +48,7 @@ button:hover{background-color: rgb(49, 111, 139);}
     font-size: 1.2em;
     font-weight: bold;
 }
-button.secret{
+#secret{
     width: 270px;
     height: 160px;
     position: absolute;
@@ -59,7 +59,6 @@ button.secret{
     background-color:rgb(42, 90, 112);
     display: none;
 }
-.secret:hover{background-color: rgb(49, 111, 139);}
 
 
 
